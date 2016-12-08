@@ -1,0 +1,35 @@
+# Muhammad Tayab Soomro
+# 11199539
+# mts066
+# CMPT 214 - nsid - Annotated Test Log
+
+
+# Showing that the script runs in different ways without error
+# 1. argument to shell invoked as a command
+-bash-4.3$ sh nsid.sh
+-bash-4.3$
+
+# 2. invoked as a command
+-bash-4.3$ ./nsid.sh
+-bash-4.3$
+
+
+# Running the program with file substitution
+# Showing that the file initially has some combination of potential NSIDs
+-bash-4.3$ cat question_2_in.txt
+ajk449 brt381
+ajk44
+
+449ajk
+ajkajk449
+ajk4449
+
+# Executing the program with the file substitution
+-bash-4.3$ sh nsid.sh < question_2_in.txt
+ajk449 is valid
+brt381 is valid
+ajk44 is not valid
+449ajk is not valid
+ajkajk449 is not valid
+ajk4449 is not valid
+-bash-4.3$
